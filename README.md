@@ -38,8 +38,7 @@ Ninput = 5
 Noutput = 3
 Num_com = 2             # Number of PLS components (=Number of X Variables)
 alpha = 0.95            # Confidence limit (=0.95)
-scores_plt = np.array([1, 2])
-
+# Dataset Generation
 X = np.random.rand(Num_observation, Ninput)
 Beta = np.random.rand(Ninput, Noutput) * 2 - 1
 CompleteData = X @ Beta
