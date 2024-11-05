@@ -1,5 +1,4 @@
 import numpy as np
-import diffrencepy as dis
 from scipy.stats import chi2, f
 import matplotlib.pyplot as plt
 
@@ -164,7 +163,7 @@ class MyPca:
         X_new=(X_new * Sx) + Cx
         return X_new
     
-    def MissEstimator(self,incom_data:np.ndarray=None,comple_data:np.ndarray=None):
+    def MissEstimator(self,incom_data:np.ndarray=None):
         '''
         It receives the incomplete data with None in its missed columns, if the actual value is also given then the 
         estimation accuracy will be given as well
@@ -185,12 +184,7 @@ class MyPca:
            
            x_hat=t_new @ self.P.T
            Estimated_block[i,:]=self.unscaler(x_hat).reshape(1,-1)
-           if comple_data is not None:
-               actual=comple_data[i,no_avable_col].reshape(1,-1)
-               estimated=Estimated_block[i,no_avable_col].reshape(1,-1)
-               #Estimation_quality[i]=self.Single_obs_error_calculation(actual,estimated,self.Xtrain_normal[:,no_avable_col])
-               Estimation_quality[i]=dis.clossness_metric(actual,estimated,self.Xtrain_normal[:,no_avable_col])
-        return Estimated_block,Estimation_quality
+        return Estimated_block
     
     def visual_plot(self, score_axis=None, X_test=None, color_code_data=None, data_labeling=False, testing_labeling=False):
         # inner Functions
