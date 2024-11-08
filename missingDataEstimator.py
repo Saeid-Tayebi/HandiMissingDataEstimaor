@@ -2,7 +2,7 @@
 import numpy as np
 from MyPcaClass import MyPca as pca
 
-def estimate_missing_data(Z:np.ndarray=None):
+def pca_missing_data_estimator(Z:np.ndarray=None):
     '''
     This function receives one block of data in which each observation is in one row
         data includes all rows without missing data and wih missing data
@@ -73,6 +73,6 @@ IncompletData=np.array([[-0.44898664, -1.70641315,         nan, -0.61481122, -1.
        [        nan, -0.9969084 ,  0.24598719,  0.10496481, -0.58950246]])
 
 # %%
-estimated_block=estimate_missing_data(IncompletData)
+estimated_block=pca_missing_data_estimator(IncompletData)
 print(estimated_block)
 

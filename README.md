@@ -1,5 +1,5 @@
 
-# Handi Missing Data Estimator
+# Handy Missing Data Estimator
 
 This repository contains a simple yet effective tool for **estimating missing data** using **Principal Component Analysis (PCA)**. It has been designed to work seamlessly with both Python and MATLAB, providing a robust way to handle missing data in various datasets.
 
@@ -25,7 +25,7 @@ Both Python and MATLAB implementations of the tool are included in this reposito
 #### Python
 
 1. Prepare an array with missing values (e.g., `IncompletData`).
-2. Use the `estimate_missing_data` function:
+2. Use the `pca_missing_data_estimator` function:
 
     ```python
     import numpy as np
@@ -35,7 +35,7 @@ Both Python and MATLAB implementations of the tool are included in this reposito
     ])
 
     # Estimating missing values
-    estimated_block = estimate_missing_data(IncompletData)
+    estimated_block = pca_missing_data_estimator(IncompletData)
     print(estimated_block)
     ```
 
@@ -57,7 +57,7 @@ Both Python and MATLAB implementations of the tool are included in this reposito
 
 ### Running the Code
 
-1. Download the appropriate file (`handi_missing_data_Estimator.py` for Python or `pca_missing_data_estimator.m` for MATLAB).
+1. Download the appropriate file (`missingDataEstimatorator.py` for Python or `missingDataEstimator.m` for MATLAB).
 2. Replace the example data with your own dataset.
 3. Run the code to estimate missing values.
 
