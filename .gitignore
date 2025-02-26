@@ -4,3 +4,4 @@ __pycache__/
 *.ipynb
 setup.py
 dist
+.gitignore
